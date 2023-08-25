@@ -1,0 +1,20 @@
+@use "../global/typography";
+
+.main {
+    min-height: 100vh;
+    display: flex;
+}
+
+.quote {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    outline: 1px solid red;
+    
+    h1 {
+        text-align: center;
+    }
+    h2 {
+        text-align: right;
+    }
+}

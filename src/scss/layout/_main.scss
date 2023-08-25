@@ -5,11 +5,19 @@
     display: flex;
 }
 
-.quote {
+.quote,
+.loading-spinner {
     width: 100%;
-    max-width: 500px;
+    max-width: 750px;
     margin: auto;
     outline: 1px solid red;
+    padding: 1rem;
+
+    img {
+        width: 30px;
+        height: 30px;
+        animation: 1s spin linear infinite;
+    }
     
     h1 {
         text-align: center;
@@ -18,3 +26,14 @@
         text-align: right;
     }
 }
+
+
+
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }

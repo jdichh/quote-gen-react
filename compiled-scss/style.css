@@ -322,15 +322,34 @@ body {
   display: flex;
 }
 
-.quote {
+.quote,
+.loading-spinner {
   width: 100%;
-  max-width: 500px;
+  max-width: 750px;
   margin: auto;
   outline: 1px solid red;
+  padding: 1rem;
 }
-.quote h1 {
+.quote img,
+.loading-spinner img {
+  width: 30px;
+  height: 30px;
+  animation: 1s spin linear infinite;
+}
+.quote h1,
+.loading-spinner h1 {
   text-align: center;
 }
-.quote h2 {
+.quote h2,
+.loading-spinner h2 {
   text-align: right;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }/*# sourceMappingURL=style.css.map */

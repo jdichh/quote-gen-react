@@ -20,7 +20,7 @@ const Quote = () => {
       })
       .catch((error) => {
         console.log("Error details: ", error);
-        setErrorMessage("Failed to generate a quote. Try again later.");
+        setErrorMessage("Failed to generate a quote. Try again?");
         setIsLoading(false);
       });
   };
@@ -34,7 +34,7 @@ const Quote = () => {
       <div className="main">
         <div className="loading-spinner">
           <h1>
-            <img src="./loading.svg" alt="Please wait, loading quote." />
+            <img src="./loading.svg" className="loading-spinner" alt="Please wait, loading quote." />
           </h1>
         </div>
       </div>
@@ -46,12 +46,13 @@ const Quote = () => {
       {errorMessage ? (
         <div className="quote">
           <h1>{errorMessage}</h1>
+          <button onClick={fetchQuote} className="get-quote-button">New Quote</button>
         </div>
       ) : (
         <div className="quote">
-          <h1>{quotes.content}</h1>
+          <h1><img src="./quote.svg" className="quotation-mark" alt="A quotation mark."/>{quotes.content}</h1>
           <h2>{quotes.author}</h2>
-          <button onClick={fetchQuote}>Click</button>
+          <button onClick={fetchQuote} className="get-quote-button">New Quote</button>
         </div>
       )}
     </div>

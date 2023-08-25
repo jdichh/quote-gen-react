@@ -3,10 +3,13 @@
 
 .header {
     display: flex;
-    background-color: colors.$off-white;
-    border-bottom: 1px solid colors.$off-black;
+    background-color: colors.$off-black;
+    color: colors.$off-white;
+    border-bottom: 1px solid colors.$off-white;
     justify-content: center;
-
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+ 
     .italicized {
         font-style: italic;
     }

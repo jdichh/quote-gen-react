@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Lora:ital@0;1&display=swap");
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -311,40 +311,51 @@ template {
 
 html,
 body {
-  color: #222222;
-  background-color: #f0e9d8;
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.08) 25%, transparent 25%), linear-gradient(-45deg, rgba(255, 255, 255, 0.08) 25%, transparent 25%), linear-gradient(45deg, transparent 75%, rgba(255, 255, 255, 0.08) 75%), linear-gradient(-45deg, transparent 75%, rgba(255, 255, 255, 0.08) 75%);
-  background-size: 20px 20px;
+  color: #F4F7F2;
+  background-color: #222222;
   overflow: hidden;
 }
 
 .main {
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
-  overflow: hidden;
+  margin: 0 1rem;
 }
 
 .quote,
 .loading-spinner {
+  background-color: #F4F7F2;
+  color: #222222;
   width: 100%;
   max-width: 750px;
   margin: auto;
-  outline: 1px solid red;
   padding: 1rem;
+  border-radius: 5px;
 }
-.quote img,
-.loading-spinner img {
+.quote .loading-spinner,
+.loading-spinner .loading-spinner {
+  width: 50px;
+  height: 50px;
+  animation: 1s spin linear infinite;
+}
+.quote .quotation-mark,
+.loading-spinner .quotation-mark {
   width: 30px;
   height: 30px;
-  animation: 1s spin linear infinite;
 }
 .quote h1,
 .loading-spinner h1 {
+  font-family: "Lato", sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.4;
   text-align: center;
 }
 .quote h2,
 .loading-spinner h2 {
+  font-family: "Lora", serif;
   text-align: right;
+  font-size: 1rem;
+  font-style: italic;
 }
 
 @keyframes spin {
@@ -352,14 +363,17 @@ body {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(-360deg);
   }
 }
 .header {
   display: flex;
-  background-color: #f0e9d8;
-  border-bottom: 1px solid #222222;
+  background-color: #222222;
+  color: #F4F7F2;
+  border-bottom: 1px solid #F4F7F2;
   justify-content: center;
+  text-align: center;
+  font-family: "Lato", sans-serif;
 }
 .header .italicized {
   font-style: italic;

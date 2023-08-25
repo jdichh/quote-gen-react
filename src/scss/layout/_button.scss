@@ -1,0 +1,14 @@
+@use '../global/typography';
+@use '../global/colors';
+
+.get-quote-button {
+    font-family: 'Lato', sans-serif;
+    background: colors.$off-black;
+    color: colors.$off-white;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    margin-right: 0.5rem;
+    text-decoration: none;
+}

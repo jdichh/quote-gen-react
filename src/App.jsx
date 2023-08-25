@@ -1,6 +1,7 @@
 import React, { useState, createContext } from "react";
 import Quote from "./components/Quote";
-export const QuoteContext = createContext()
+import Header from "./components/Header";
+export const QuoteContext = createContext();
 
 const App = () => {
   const [quotes, setQuotes] = useState(null);
@@ -8,9 +9,21 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <QuoteContext.Provider value={[quotes, setQuotes, errorMessage, setErrorMessage, isLoading, setIsLoading]}>
-      <Quote/>
-    </QuoteContext.Provider>
+    <>
+      <Header />
+      <QuoteContext.Provider
+        value={[
+          quotes,
+          setQuotes,
+          errorMessage,
+          setErrorMessage,
+          isLoading,
+          setIsLoading,
+        ]}
+      >
+        <Quote />
+      </QuoteContext.Provider>
+    </>
   );
 };
 

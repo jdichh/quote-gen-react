@@ -315,11 +315,13 @@ body {
   background-color: #f0e9d8;
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.08) 25%, transparent 25%), linear-gradient(-45deg, rgba(255, 255, 255, 0.08) 25%, transparent 25%), linear-gradient(45deg, transparent 75%, rgba(255, 255, 255, 0.08) 75%), linear-gradient(-45deg, transparent 75%, rgba(255, 255, 255, 0.08) 75%);
   background-size: 20px 20px;
+  overflow: hidden;
 }
 
 .main {
   min-height: 100vh;
   display: flex;
+  overflow: hidden;
 }
 
 .quote,
@@ -352,4 +354,13 @@ body {
   to {
     transform: rotate(360deg);
   }
+}
+.header {
+  display: flex;
+  background-color: #f0e9d8;
+  border-bottom: 1px solid #222222;
+  justify-content: center;
+}
+.header .italicized {
+  font-style: italic;
 }/*# sourceMappingURL=style.css.map */

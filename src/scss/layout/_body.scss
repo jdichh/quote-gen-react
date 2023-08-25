@@ -13,4 +13,5 @@ body {
     linear-gradient(45deg, transparent 75%, rgba(255, 255, 255, 0.08) 75%),
     linear-gradient(-45deg, transparent 75%, rgba(255, 255, 255, 0.08) 75%);
   background-size: 20px 20px;
+  overflow: hidden;
 }

@@ -1,0 +1,13 @@
+@use '../global/colors';
+@use '../global/typography';
+
+.header {
+    display: flex;
+    background-color: colors.$off-white;
+    border-bottom: 1px solid colors.$off-black;
+    justify-content: center;
+
+    .italicized {
+        font-style: italic;
+    }
+}

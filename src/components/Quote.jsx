@@ -42,7 +42,7 @@ const Quote = () => {
   }
 
   return (
-    <div className="main">
+    <main className="main">
       {errorMessage ? (
         <div className="quote">
           <h1>{errorMessage}</h1>
@@ -50,13 +50,13 @@ const Quote = () => {
         </div>
       ) : (
         <div className="quote">
-          <h1><img src="./quote.svg" className="quotation-mark" alt="A quotation mark."/>{quotes.content}</h1>
+          <h1><blockquote><img src="./quote.svg" className="quotation-mark" alt="A quotation mark."/>{quotes.content}</blockquote></h1>
           <h2>{quotes.author}</h2>
           <button onClick={fetchQuote} className="get-quote-button">New Quote</button>
           <a href={`https://twitter.com/intent/tweet?text=${quotes.content}`} target="_blank" rel="noopener noreferrer" className="get-quote-button">Tweet It</a>
         </div>
       )}
-    </div>
+    </main>
   );
 };
 

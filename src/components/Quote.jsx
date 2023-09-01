@@ -31,13 +31,13 @@ const Quote = () => {
 
   if (isLoading) {
     return (
-      <div className="main">
+      <main className="main">
         <div className="loading-spinner">
           <h1>
             <img src="./loading.svg" className="loading-spinner" alt="Please wait, loading quote." />
           </h1>
         </div>
-      </div>
+      </main>
     );
   }
 
